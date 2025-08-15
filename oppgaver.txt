@@ -1,30 +1,51 @@
 Nummer,Spørsmål,Svar1,Svar2,Svar3,Svar4,Fasit
-23,Hvilken planet er nærmest solen?,Venus,Merkur,Mars,Jupiter,Merkur
-24,Hvilket år ble internett kommersielt tilgjengelig?,1989,1990,1991,1992,1991
-25,Hva kalles prosessen der planter lager mat av sollys?,Respirasjon,Fotosyntese,Glykolyse,Klorofyll,Fotosyntese
-26,Hvilket organ produserer insulin i kroppen?,Lever,Bukspyttkjertelen,Nyre,Hjerte,Bukspyttkjertelen
-27,Hvem utviklet teorien om relativitet?,Isaac Newton,Galileo Galilei,Albert Einstein,Nikola Tesla,Albert Einstein
-28,Hvilket metall brukes mest i elektriske ledninger?,Kobber,Aluminium,Jern,Titan,Kobber
-29,Hva heter roboten som landet på Mars i 2021?,Curiosity,Spirit,Perseverance,Opportunity,Perseverance
-30,Hvilket vitamin får vi fra solen?,Vitamin A,Vitamin B,Vitamin C,Vitamin D,Vitamin D
-31,Hvem skrev «1984»?,Aldous Huxley,George Orwell,Ray Bradbury,J.K. Rowling,George Orwell
-32,I hvilken film spiller Leonardo DiCaprio Jack Dawson?,Inception,The Revenant,Titanic,Catch Me If You Can,Titanic
-33,Hvilken artist ga ut albumet «Thriller»?,Prince,Madonna,Michael Jackson,Whitney Houston,Michael Jackson
-34,Hvilken TV-serie handler om en kjemilærer som blir narkobaron?,The Sopranos,Breaking Bad,Narcos,Better Call Saul,Breaking Bad
-35,Hvem malte «Mona Lisa»?,Vincent van Gogh,Leonardo da Vinci,Pablo Picasso,Claude Monet,Leonardo da Vinci
-36,Hvilket år vant Norge første Eurovision-seier?,1985,1986,1987,1988,1985
-37,Hvilken regissør står bak «Jurassic Park»?,James Cameron,Steven Spielberg,Ridley Scott,Peter Jackson,Steven Spielberg
-38,Hva er hovedstaden i Canada?,Ottawa,Toronto,Vancouver,Montreal,Ottawa
-39,Hvilket land er kjent som «Soloppgangens land»?,Kina,Japan,Thailand,Filippinene,Japan
-40,Hvilken elv er den lengste i verden?,Nilen,Amazone,Yangtze,Mississippi,Nilen
-41,Hvem skrev «Romeo og Julie»?,William Shakespeare,Charles Dickens,Leo Tolstoy,Mark Twain,William Shakespeare
-42,Hvilket år landet Apollo 11 på månen?,1965,1969,1972,1967,1969
-43,Hvem oppfant telefonen?,Alexander Graham Bell,Thomas Edison,Nikola Tesla,James Watt,Alexander Graham Bell
-44,Hvilket land vant fotball-VM i 2018?,Tyskland,Brasil,Frankrike,Argentina,Frankrike
-45,Hvilket grunnstoff har symbolet Na?,Natrium,Kalium,Kalsium,Jern,Natrium
-46,Hva heter verdens høyeste fjell?,Mount Everest,K2,Kangchenjunga,Lhotse,Mount Everest
-47,Hvilket år startet andre verdenskrig?,1937,1939,1941,1945,1939
-48,Hvem malte «Nattevakten»?,Rembrandt,Van Gogh,Vermeer,Michelangelo,Rembrandt
-49,Hva heter hovedstaden i Australia?,Sydney,Melbourne,Canberra,Brisbane,Canberra
-50,Hvilket språk har flest morsmålstalere?,Engelsk,Kinesisk,Spansk,Hindi,Kinesisk
-
+1,Hvilken hitlåt toppet listene i 1983?,Every Breath You Take,Billie Jean,Total Eclipse of the Heart,Flashdance... What a Feeling,Billie Jean
+2,Hvilket år gikk Challenger-romfergen i luften før ulykken?,, , , ,1986
+3,Hvem vant fotball-VM i 1994?,Brasil,Italia,Tyskland,Argentina,Brasil
+4,Hvilket år ble World Wide Web offentlig tilgjengelig?,, , , ,1991
+5,Hvilken film vant Oscar for beste film i 1997?,Titanic,The English Patient,Good Will Hunting,LA Confidential,Titanic
+6,Hvilket år ble Berlinmuren revet?,, , , ,1989
+7,Hvem ble USAs president i 2008?,Barack Obama,John McCain,Hillary Clinton,George W. Bush,Barack Obama
+8,Hvilket år gikk den første iPhone på markedet?,, , , ,2007
+9,Hvilket land vant fotball-VM i 2010?,Spania,Brasil,Tyskland,Italia,Spania
+10,Hvilket år ble Facebook lansert?,, , , ,2004
+11,Hvem vant Eurovision Song Contest i 1985?,Bobbysocks,Ramses Shaffy,Lordi,ABBA,Bobbysocks
+12,Hvilket år ble Sovjetunionen oppløst?,, , , ,1991
+13,Hvilken film hadde premiere i 1994 med karakteren Forrest Gump?,Pulp Fiction,Forrest Gump,The Shawshank Redemption,Speed,Forrest Gump
+14,Hvilket år ble internett kommersielt tilgjengelig?,, , , ,1991
+15,Hvilken artist ga ut albumet «Thriller»?,Prince,Madonna,Michael Jackson,Whitney Houston,Michael Jackson
+16,Hvilket år ble OL i Barcelona arrangert?,, , , ,1992
+17,Hvilket år ble Napster lansert?,, , , ,1999
+18,Hvilket år ble Harry Potter og De vises stein utgitt?,, , , ,1997
+19,Hvem vant Nobels fredspris i 1993?,Nelson Mandela,Fredrik Willem de Klerk,Shimon Peres,Yasser Arafat,Nelson Mandela
+20,Hvilket år ble Euroen introdusert som fysisk valuta?,, , , ,2002
+21,Hvem ble den første kvinnelige kansleren i Tyskland?,Angela Merkel,Helmut Kohl,Gudrun Schyman,Simone Veil,Angela Merkel
+22,Hvilket år ble YouTube lansert?,, , , ,2005
+23,Hvilket band ga ut «Smells Like Teen Spirit»?,Nirvana,Metallica,Pearl Jam,Soundgarden,Nirvana
+24,Hvilket år ble Windows 95 lansert?,, , , ,1995
+25,Hvem vant Tour de France i 1999?,Lance Armstrong,Jan Ullrich,Miguel Indurain,Bjarne Riis,Lance Armstrong
+26,Hvilket år ble Nintendo Wii lansert?,, , , ,2006
+27,Hvilken filmserie begynte med «The Lord of the Rings: The Fellowship of the Ring»?,Harry Potter,The Lord of the Rings,Star Wars,Hunger Games,The Lord of the Rings
+28,Hvilket år ble Twitter lansert?,, , , ,2006
+29,Hvem ble valgt til Storbritannias statsminister i 1997?,Tony Blair,John Major,David Cameron,Gordon Brown,Tony Blair
+30,Hvilket år ble Google grunnlagt?,, , , ,1998
+31,Hvilken artist ga ut albumet «Like a Virgin»?,Madonna,Whitney Houston,Janet Jackson,Prince,Madonna
+32,Hvilket år ble Titanic-skipet senket?,, , , ,1912
+33,Hvem vant fotball-VM i 1982?,Italia,Brasil,Tyskland,Argentina,Italia
+34,Hvilket år ble Nokia 3310 lansert?,, , , ,2000
+35,Hvilken film vant Oscar for beste film i 2001?,Gladiator,A Beautiful Mind,The Lord of the Rings: The Fellowship of the Ring,Traffic,A Beautiful Mind
+36,Hvilket år ble Wikipedia lansert?,, , , ,2001
+37,Hvem vant Nobels fredspris i 2009?,Barack Obama,Bill Clinton,Al Gore,Kofi Annan,Barack Obama
+38,Hvilket år ble Spotify lansert?,, , , ,2008
+39,Hvilken TV-serie hadde premiere i 1999 med karakteren Tony Soprano?,The Sopranos,Friends,The West Wing,Buffy The Vampire Slayer,The Sopranos
+40,Hvilket år ble Amazon grunnlagt?,, , , ,1994
+41,Hvilket år ble OL i London arrangert?,, , , ,2012
+42,Hvilket år ble Instagram lansert?,, , , ,2010
+43,Hvem vant VM i sjakk i 1985?,Anatoly Karpov,Garry Kasparov,Viswanathan Anand,Bobby Fischer,Garry Kasparov
+44,Hvilket år ble Tesla grunnlagt?,, , , ,2003
+45,Hvem ga ut «Born in the USA»?,Bruce Springsteen,Prince,Bob Dylan,Madonna,Bruce Springsteen
+46,Hvilket år ble iPad lansert?,, , , ,2010
+47,Hvem vant Tour de France i 2003?,Lance Armstrong,Jan Ullrich,Miguel Indurain,Bjarne Riis,Lance Armstrong
+48,Hvilket år ble Netflix strømmetjeneste lansert?,, , , ,2007
+49,Hvilken film vant Oscar for beste film i 2010?,The Hurt Locker,Avatar,Inception,The King's Speech,The King's Speech
+50,Hvilket år ble Facebook lansert?,, , , ,2004
