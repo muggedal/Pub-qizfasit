@@ -1,0 +1,11 @@
+Lag 50 pub-quiz spørsmål med middels vanskelighet, målrettet mot personer mellom 40 og 90 år. 
+Spørsmålene skal være basert på hendelser, kultur, teknologi og temaer som har skjedd i deres levetid. 
+Format: CSV, komma-separert, med kolonnene: Nummer,Spørsmål,Svar1,Svar2,Svar3,Svar4,Fasit 
+Regler: 
+1. Alle spørsmål skal ha fire svaralternativer (Svar1–Svar4) og en fasit. 
+2. Nummerering fra 1 til 50. 3. Alle spørsmålene skal være relevante for personer mellom 40–90 år i dag. 
+
+Eksempel på format: 
+Nummer,Spørsmål,Svar1,Svar2,Svar3,Svar4,Fasit 
+1,Hva var den største musikkhiten i 1985?,Take On Me,We Are The World,Like a Virgin,Money for Nothing,We Are The World 
+2,Hvilket år ble Berlinmuren revet?,1989,1987,1991,1990,1989
