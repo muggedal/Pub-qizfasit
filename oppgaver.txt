@@ -1,0 +1,51 @@
+Nummer,Spørsmål,Svar1,Svar2,Svar3,Svar4,Fasit
+1,Hva er hovedstaden i Sri Lanka?,Colombo,Kandy,Galle,Jaffna,Colombo
+2,Hvilket land har flest øyer i verden?,Finland,Sverige,Canada,Indonesia,Sverige
+3,Gjennom hvilken by renner elven Seine?,Lyon,Marseille,Paris,Nice,Paris
+4,Hvilket afrikansk land har Casablanca som største by?,Egypt,Algerie,Marokko,Tunisia,Marokko
+5,Hva heter den største innsjøen i Sør-Amerika?,Maracaibo,Titicaca,Poopo,General Carrera,Titicaca
+6,Hvilket land har grensen mot flest land i verden?,Russland,Kina,Brasil,Tyskland,Kina
+7,Hva er hovedstaden i New Zealand?,Auckland,Wellington,Christchurch,Hamilton,Wellington
+8,Hvilket land har Bergens fjorder som turistattraksjon?,Sverige,Norge,Island,Finland,Norge
+9,Hvilken ørken er verdens største?,Sahara,Gobi,Antarktisk ørken,Kalahari,Antarktisk ørken
+10,I hvilken by ligger Den kinesiske mur nærmest Beijing?,Badaling,Shanghai,Xi'an,Tianjin,Badaling
+11,Hvem var dronning av England under den spanske armadaen?,Mary I,Elizabeth I,Victoria,Anne,Elizabeth I
+12,I hvilket år startet første verdenskrig?,1912,1914,1916,1918,1914
+13,Hvilket land koloniserte India før uavhengigheten i 1947?,Frankrike,Storbritannia,Portugal,Nederland,Storbritannia
+14,Hvem var den første keiseren av Kina?,Liu Bang,Qin Shi Huang,Sun Yat-sen,Kangxi,Qin Shi Huang
+15,Hvilket år ble Berlinmuren revet?,1987,1988,1989,1990,1989
+16,Hvem ledet den russiske revolusjonen i 1917?,Joseph Stalin,Vladimir Lenin,Leon Trotsky,Nicholas II,Vladimir Lenin
+17,Hvilken krig fant sted mellom 1950–1953?,Vietnamkrigen,Koreakrigen,Første verdenskrig,Andre verdenskrig,Koreakrigen
+18,Hvem var statsminister i Storbritannia under andre verdenskrig?,Neville Chamberlain,Winston Churchill,Clement Attlee,Margaret Thatcher,Winston Churchill
+19,Hvilket imperium ble styrtet av Alexander den store?,Romerriket,Mongolriket,Perserriket,Egypt,Perserriket
+20,I hvilket år ble FN grunnlagt?,1919,1939,1945,1950,1945
+21,Hva heter kjemiske symbolet for gull?,Ag,Au,Pb,Fe,Au
+22,Hvilket grunnstoff har atomnummer 6?,Oksygen,Nitrogen,Karbon,Hydrogen,Karbon
+23,Hvilken planet er nærmest solen?,Venus,Merkur,Mars,Jupiter,Merkur
+24,Hvilket år ble internett kommersielt tilgjengelig?,1989,1990,1991,1992,1991
+25,Hva kalles prosessen der planter lager mat av sollys?,Respirasjon,Fotosyntese,Glykolyse,Klorofyll,Fotosyntese
+26,Hvilket organ produserer insulin i kroppen?,Lever,Bukspyttkjertelen,Nyre,Hjerte,Bukspyttkjertelen
+27,Hvem utviklet teorien om relativitet?,Isaac Newton,Galileo Galilei,Albert Einstein,Nikola Tesla,Albert Einstein
+28,Hvilket metall brukes mest i elektriske ledninger?,Kobber,Aluminium,Jern,Titan,Kobber
+29,Hva heter roboten som landet på Mars i 2021?,Curiosity,Spirit,Perseverance,Opportunity,Perseverance
+30,Hvilket vitamin får vi fra solen?,Vitamin A,Vitamin B,Vitamin C,Vitamin D,Vitamin D
+31,Hvem skrev «1984»?,Aldous Huxley,George Orwell,Ray Bradbury,J.K. Rowling,George Orwell
+32,I hvilken film spiller Leonardo DiCaprio Jack Dawson?,Inception,The Revenant,Titanic,Catch Me If You Can,Titanic
+33,Hvilken artist ga ut albumet «Thriller»?,Prince,Madonna,Michael Jackson,Whitney Houston,Michael Jackson
+34,Hvilken TV-serie handler om en kjemilærer som blir narkobaron?,The Sopranos,Breaking Bad,Narcos,Better Call Saul,Breaking Bad
+35,Hvem malte «Mona Lisa»?,Vincent van Gogh,Leonardo da Vinci,Pablo Picasso,Claude Monet,Leonardo da Vinci
+36,Hvilket år vant Norge første Eurovision-seier?,1985,1986,1987,1988,1985
+37,Hvilken regissør står bak «Jurassic Park»?,James Cameron,Steven Spielberg,Ridley Scott,Peter Jackson,Steven Spielberg
+38,Hva er hovedstaden i Canada?,Ottawa,Toronto,Vancouver,Montreal,Ottawa
+39,Hvilket land er kjent som «Soloppgangens land»?,Kina,Japan,Thailand,Filippinene,Japan
+40,Hvilken elv er den lengste i verden?,Nilen,Amazone,Yangtze,Mississippi,Nilen
+41,Hvem skrev «Romeo og Julie»?,William Shakespeare,Charles Dickens,Leo Tolstoy,Mark Twain,William Shakespeare
+42,Hvilket år landet Apollo 11 på månen?,1965,1969,1972,1967,1969
+43,Hvem oppfant telefonen?,Alexander Graham Bell,Thomas Edison,Nikola Tesla,James Watt,Alexander Graham Bell
+44,Hvilket land vant fotball-VM i 2018?,Tyskland,Brasil,Frankrike,Argentina,Frankrike
+45,Hvilket grunnstoff har symbolet Na?,Natrium,Kalium,Kalsium,Jern,Natrium
+46,Hva heter verdens høyeste fjell?,Mount Everest,K2,Kangchenjunga,Lhotse,Mount Everest
+47,Hvilket år startet andre verdenskrig?,1937,1939,1941,1945,1939
+48,Hvem malte «Nattevakten»?,Rembrandt,Van Gogh,Vermeer,Michelangelo,Rembrandt
+49,Hva heter hovedstaden i Australia?,Sydney,Melbourne,Canberra,Brisbane,Canberra
+50,Hvilket språk har flest morsmålstalere?,Engelsk,Kinesisk,Spansk,Hindi,Kinesisk
