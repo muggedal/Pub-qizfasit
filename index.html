@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pub Quiz Fasit Gjennomgang</title>
+    <style>
+        /* Grunnleggende stil for hele siden */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Lys grå bakgrunn */
+            display: flex; /* Bruk flexbox for sentrering */
+            justify-content: center; /* Horisontal sentrering */
+            align-items: center; /* Vertikal sentrering */
+            min-height: 100vh; /* Minimum høyde på 100% av viewport høyde */
+            margin: 0; /* Fjern standard margin */
+            padding: 20px; /* Litt polstring rundt innholdet */
+            box-sizing: border-box; /* Inkluder polstring og kantlinje i elementets totale bredde og høyde */
+        }
+
+        /* Stil for hovedcontaineren som holder quiz-innholdet */
+        .container {
+            background-color: #ffffff; /* Hvit bakgrunn */
+            border-radius: 8px; /* Avrundede hjørner */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtil skygge for dybde */
+            padding: 30px; /* Indre polstring */
+            width: 100%; /* Tar opp all tilgjengelig bredde */
+            max-width: 600px; /* Maksimal bredde for bedre lesbarhet på store skjermer */
+            text-align: center; /* Sentrer tekst inni containeren */
+        }
+
+        /* Stil for hovedtittelen */
+        h1 {
+            color: #333; /* Mørk tekstfarge */
+            margin-bottom: 20px; /* Avstand under tittelen */
+        }
+
+        /* Skjul quiz-containeren initialt */
+        #quiz-container {
+            display: none;
+            text-align: left; /* Juster tekst til venstre for spørsmål og alternativer */
+        }
+
+        /* Stil for spørsmålsteksten */
+        #question {
+            font-size: 1.5em; /* Større skriftstørrelse */
+            margin-bottom: 20px; /* Avstand under spørsmålet */
+            line-height: 1.4; /* Øk linjehøyden for bedre lesbarhet */
+        }
+
+        /* Stil for valgmulighetene (knapper) */
+        .options {
+            display: flex; /* Bruk flexbox for å stable knappene vertikalt */
+            flex-direction: column; /* Vertikal stabling */
+            gap: 10px; /* Mellomrom mellom knappene */
+        }
+
+        /* Stil for hver enkelt valgmulighetsknapp */
+        .option-btn {
+            background-color: #e9e9e9; /* Lys grå bakgrunn */
+            border: 1px solid #ccc; /* Grå kantlinje */
+            border-radius: 5px; /* Avrundede hjørner */
+            padding: 12px; /* Indre polstring */
+            font-size: 1em; /* Standard skriftstørrelse */
+            text-align: left; /* Juster tekst til venstre */
+            cursor: pointer; /* Vis peker som hånd når musen er over */
+            transition: background-color 0.3s, border-color 0.3s; /* Jevn overgang ved hover */
+            width: 100%; /* Knappene fyller foreldrecontainerens bredde */
+        }
+
+        /* Hover-effekt for valgmulighetsknappene */
+        .option-btn:hover {
+            background-color: #dcdcdc; /* Mørkere grå ved hover */
+        }
+
+        /* Stil for den riktige valgmulighetsknappen når den avsløres */
+        .option-btn.correct {
+            background-color: #d4edda; /* Lys grønn bakgrunn */
+            border-color: #c3e6cb; /* Mørkere grønn kantlinje */
+            color: #155724; /* Mørkegrønn tekst */
+            font-weight: bold; /* Fet tekst */
+        }
+        
+        /* Stil for navigasjonsknapp-containeren */
+        .navigation-container {
+            display: flex; /* Bruk flexbox for å plassere knapper side ved side */
+            justify-content: space-between; /* Fordel plassen jevnt mellom knappene */
+            margin-top: 25px; /* Avstand over navigasjonsknappene */
+        }
+
+        /* Felles stil for navigasjonsknappene (Neste, Forrige, Start Quiz) */
+        .nav-btn {
+            background-color: #007bff; /* Blå bakgrunn */
+            color: white; /* Hvit tekst */
+            border: none; /* Ingen kantlinje */
+            border-radius: 5px; /* Avrundede hjørner */
+            padding: 12px 24px; /* Polstring for knappene */
+            font-size: 1em; /* Standard skriftstørrelse */
+            cursor: pointer; /* Vis peker som hånd */
+            transition: background-color 0.3s; /* Jevn overgang ved hover */
+            flex-grow: 1; /* Lar knappene vokse for å fylle plassen */
+            margin: 0 5px; /* Litt margin mellom knapper */
+        }
+
+        /* Hover-effekt for navigasjonsknappene */
+        .nav-btn:hover {
+            background-color: #0056b3; /* Mørkere blå ved hover */
+        }
+
+        /* Hjelpeklasse for å skjule elementer */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Stil for meldinger (f.eks. etter filopplasting) */
+        #message {
+            color: #333;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Stil for filopplastingscontaineren */
+        #file-input-container {
+            margin-top: 20px;
+        }
+
+        /* Stil for filopplastingsfeltet */
+        input[type="file"] {
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            width: calc(100% - 22px); /* Tilpass bredden med polstring og kantlinje */
+        }
+
+        /* Spesifikk stil for Start Quiz-knappen */
+        #start-btn {
+            background-color: #28a745; /* Grønn farge */
+            margin-top: 20px; /* Avstand over knappen */
+        }
+        #start-btn:hover {
+            background-color: #218838; /* Mørkere grønn ved hover */
+        }
+
+        /* Spesifikk stil for Forrige-knappen */
+        #prev-btn {
+            background-color: #6c757d; /* Grå farge */
+        }
+        #prev-btn:hover {
+            background-color: #5a6268; /* Mørkere grå ved hover */
+        }
+
+        /* Tilpass for mindre skjermer (f.eks. mobil) */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            #question {
+                font-size: 1.2em;
+            }
+            .nav-btn {
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+            .navigation-container {
+                flex-direction: column; /* Stable knapper vertikalt på små skjermer */
+                gap: 10px;
+            }
+            .nav-btn {
+                margin: 0; /* Fjern horisontal margin */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Pub Quiz Fasit Gjennomgang</h1>
+
+    <!-- Oppsett-container for filopplasting -->
+    <div id="setup-container">
+        <p>Last opp en tekstfil med spørsmålene dine. Filen må ha formatet:</p>
+        <p style="font-family: monospace; font-size: 0.9em; background-color: #f8f8f8; padding: 10px; border-radius: 5px; border: 1px dashed #ccc; display: inline-block; word-break: break-all;">nummer,spørsmål,svar1,svar2,svar3,svar4,fasit</p>
+        <div id="file-input-container">
+            <input type="file" id="file-upload" accept=".txt">
+        </div>
+        <button id="start-btn" class="nav-btn hidden">Start Quiz</button>
+        <p id="message"></p>
+    </div>
+    
+    <!-- Quiz-container for spørsmål og svar -->
+    <div id="quiz-container">
+        <h2 id="question-number"></h2>
+        <div id="question"></div>
+        <div class="options" id="options-container">
+            <!-- Svaralternativer vil bli generert her av JavaScript -->
+        </div>
+        <div class="navigation-container">
+            <button id="prev-btn" class="nav-btn hidden">Forrige</button>
+            <button id="next-btn" class="nav-btn">Neste</button>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    // Vent til DOM er fullstendig lastet før scriptet kjøres
+    document.addEventListener('DOMContentLoaded', () => {
+        // Hent referanser til HTML-elementer
+        const fileUpload = document.getElementById('file-upload');
+        const startBtn = document.getElementById('start-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const setupContainer = document.getElementById('setup-container');
+        const quizContainer = document.getElementById('quiz-container');
+        const questionNumberElem = document.getElementById('question-number');
+        const questionElem = document.getElementById('question');
+        const optionsContainer = document.getElementById('options-container');
+        const messageElem = document.getElementById('message');
+
+        // Globale variabler for å lagre spørsmål og sporre fremdrift
+        let questions = []; // Array for å holde alle spørsmålobjekter
+        let currentQuestionIndex = 0; // Indeks for det nåværende spørsmålet
+        let isAnswerRevealed = false; // Status for om svaret er avslørt for gjeldende spørsmål
+
+        // Hendelseslytter for når en fil er valgt for opplasting
+        fileUpload.addEventListener('change', (event) => {
+            const file = event.target.files[0]; // Få den valgte filen
+            if (file) {
+                const reader = new FileReader(); // Opprett en fil-leser
+                reader.onload = (e) => {
+                    try {
+                        const content = e.target.result; // Få innholdet fra filen som tekst
+                        questions = parseQuestions(content); // Pars filinnholdet til spørsmål
+                        if (questions.length > 0) {
+                            // Hvis spørsmål ble funnet, vis melding og Start-knappen
+                            messageElem.textContent = `${questions.length} spørsmål lastet inn. Klar til start!`;
+                            startBtn.classList.remove('hidden');
+                        } else {
+                            // Hvis ingen spørsmål ble funnet, vis feilmelding
+                            messageElem.textContent = 'Ingen gyldige spørsmål funnet i filen. Sjekk formatet.';
+                            startBtn.classList.add('hidden'); // Skjul Start-knappen
+                        }
+                    } catch (error) {
+                        // Håndter feil under filinnlasting
+                        messageElem.textContent = 'Det oppstod en feil under innlasting av filen. Kontroller filformatet.';
+                        console.error("Filinnlastingsfeil:", error);
+                        startBtn.classList.add('hidden');
+                    }
+                };
+                reader.readAsText(file); // Les filen som tekst
+            }
+        });
+
+        // Hendelseslytter for Start Quiz-knappen
+        startBtn.addEventListener('click', () => {
+            if (questions.length > 0) {
+                setupContainer.style.display = 'none'; // Skjul oppsett-containeren
+                quizContainer.style.display = 'block'; // Vis quiz-containeren
+                currentQuestionIndex = 0; // Sett spørsmålsindeksen til start
+                showQuestion(currentQuestionIndex); // Vis første spørsmål
+            }
+        });
+
+        // Hendelseslytter for Neste-knappen
+        nextBtn.addEventListener('click', () => {
+            if (!isAnswerRevealed) {
+                // Første klikk på "Neste": avslør riktig svar for nåværende spørsmål
+                showAnswer();
+                isAnswerRevealed = true;
+            } else {
+                // Andre klikk på "Neste": gå til neste spørsmål
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    // Hvis det er flere spørsmål, vis neste
+                    showQuestion(currentQuestionIndex);
+                    isAnswerRevealed = false; // Reset status for svaravsløring
+                } else {
+                    // Hvis alle spørsmål er gått gjennom, vis sluttmelding
+                    quizContainer.innerHTML = '<h2 class="text-center">Quizen er ferdig!</h2><p class="text-center">Takk for at du deltok i gjennomgangen.</p>';
+                }
+            }
+            updateNavigationButtons(); // Oppdater synlighet og tekst på navigasjonsknappene
+        });
+
+        // Hendelseslytter for Forrige-knappen
+        prevBtn.addEventListener('click', () => {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--; // Gå tilbake til forrige spørsmål
+                showQuestion(currentQuestionIndex); // Vis forrige spørsmål
+                isAnswerRevealed = false; // Reset status for svaravsløring når vi går tilbake
+            }
+            updateNavigationButtons(); // Oppdater synlighet på navigasjonsknappene
+        });
+
+        // Funksjon for å parse tekstfilens innhold til et array av spørsmålsobjekter
+        function parseQuestions(content) {
+            const lines = content.split('\n').filter(line => line.trim() !== ''); // Del opp innholdet i individuelle linjer og fjern tomme
+            const parsedQuestions = [];
+            let skippedLinesCount = 0;
+
+            // Anta at første rad er en overskrift og hopp over den hvis den ser ut som en overskrift
+            if (lines.length > 0) {
+                const firstLine = lines[0].toLowerCase();
+                // En enkel sjekk for å se om den første linjen inneholder typiske overskriftstermer og riktig antall kolonner
+                if (firstLine.includes('spørsmål') && firstLine.includes('fasit') && firstLine.split(',').length === 7) {
+                    lines.shift(); // Fjern overskriftsraden
+                }
+            }
+
+            lines.forEach((line, index) => {
+                const parts = line.split(',').map(part => part.trim()); // Del hver linje etter komma og fjern mellomrom
+                // Forventer 7 deler: nummer, spørsmål, 4 svaralternativer, fasit (tekst)
+                if (parts.length === 7) {
+                    const [number, question, ans1, ans2, ans3, ans4, correctAnswerText] = parts;
+                    const options = [ans1, ans2, ans3, ans4];
+                    
+                    // Finn indeksen til riktig svartekst i listen over alternativer
+                    const correctAnswerIndex = options.findIndex(option => option.toLowerCase() === correctAnswerText.toLowerCase());
+                    
+                    // Valider at riktig svartekst ble funnet blant alternativene
+                    if (correctAnswerIndex !== -1) {
+                        parsedQuestions.push({
+                            number: number,
+                            question: question,
+                            options: options,
+                            correctAnswer: correctAnswerIndex // Bruker nå 0-indeksert posisjon
+                        });
+                    } else {
+                        skippedLinesCount++;
+                        console.warn(`Advarsel: Riktig svartekst "${correctAnswerText}" ble ikke funnet blant alternativene for linje ${index + 1} (etter header): "${line}". Hoppet over.`);
+                    }
+                } else {
+                    skippedLinesCount++;
+                    console.warn(`Advarsel: Linje ${index + 1} (etter header) med feil antall deler: "${line}". Forventet 7 deler, fant ${parts.length}. Hoppet over.`);
+                }
+            });
+
+            // Gi brukeren tilbakemelding hvis noen linjer ble hoppet over
+            if (skippedLinesCount > 0) {
+                messageElem.textContent += ` Advarsel: ${skippedLinesCount} linjer ble hoppet over på grunn av ugyldig format eller feil i fasit-tekst.`;
+            }
+            return parsedQuestions;
+        }
+
+        // Funksjon for å vise et spørsmål
+        function showQuestion(index) {
+            const q = questions[index]; // Hent spørsmålobjektet for gitt indeks
+            questionNumberElem.textContent = `Spørsmål ${q.number} av ${questions.length}`; // Vis spørsmålsnummer
+            questionElem.textContent = q.question; // Vis spørsmålsteksten
+            optionsContainer.innerHTML = ''; // Tøm tidligere alternativer
+
+            // Lag knapper for hvert svaralternativ
+            q.options.forEach((option, i) => {
+                const button = document.createElement('button');
+                button.classList.add('option-btn');
+                button.textContent = `${i + 1}. ${option}`; // Legg til nummer foran alternativet
+                optionsContainer.appendChild(button);
+            });
+            
+            // Oppdater navigasjonsknappene basert på nåværende tilstand
+            updateNavigationButtons();
+        }
+
+        // Funksjon for å avsløre det riktige svaret
+        function showAnswer() {
+            const q = questions[currentQuestionIndex]; // Hent det nåværende spørsmålet
+            const optionButtons = optionsContainer.querySelectorAll('.option-btn'); // Få alle alternativknappene
+            
+            // Gå gjennom alle knapper og marker den riktige
+            optionButtons.forEach((btn, i) => {
+                if (i === q.correctAnswer) {
+                    btn.classList.add('correct'); // Legg til "correct"-klassen for styling
+                }
+            });
+        }
+        
+        // Funksjon for å oppdatere tekst og synlighet på navigasjonsknappene
+        function updateNavigationButtons() {
+            // Skjul "Forrige"-knappen hvis vi er på første spørsmål, ellers vis den
+            if (currentQuestionIndex > 0 && !isAnswerRevealed) {
+                 prevBtn.classList.remove('hidden');
+            } else {
+                 prevBtn.classList.add('hidden');
+            }
+
+            // Endre tekst på "Neste"-knappen basert på om svaret er avslørt eller quizen er ferdig
+            if (currentQuestionIndex >= questions.length - 1 && isAnswerRevealed) {
+                nextBtn.textContent = 'Avslutt Quiz'; // Når siste spørsmål er avslørt
+            } else if (isAnswerRevealed) {
+                nextBtn.textContent = 'Neste Spørsmål'; // Når svaret er avslørt, men det er flere spørsmål
+            } else {
+                nextBtn.textContent = 'Vis Fasit'; // Første klikk på "Neste" for et spørsmål
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
